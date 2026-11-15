@@ -16,6 +16,10 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>org.mockito</groupId><artifactId>mockito-core</artifactId>
+            <version>5.14.2</version><scope>test</scope>
+        </dependency>
         <!-- Tomcat 11 dùng Jakarta Servlet/JSP, không dùng javax.servlet nữa -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
@@ -105,6 +109,9 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>3.2.5</version>
+                <configuration>
+                    <argLine>-javaagent:"${settings.localRepository}/org/mockito/mockito-core/5.14.2/mockito-core-5.14.2.jar"</argLine>
+                </configuration>
             </plugin>
         </plugins>
     </build>

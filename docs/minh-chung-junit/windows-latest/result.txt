@@ -1,0 +1,3 @@
+﻿Run time: 2026-11-15T16:34:18.1419672+07:00
+Tests: 67; failures/errors/skipped: 0
+Command: mvn clean test -Dtest=*ControllerTest
