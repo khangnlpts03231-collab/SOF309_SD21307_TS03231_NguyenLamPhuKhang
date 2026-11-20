@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: vn.celineclosset.controller.AdminCategoryControllerTest
+-------------------------------------------------------------------------------
+Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in vn.celineclosset.controller.AdminCategoryControllerTest

@@ -1,25 +1,17 @@
-# Kết quả JUnit tuần 2
+# Kết quả JUnit Celine Closet — bản trình bày theo mẫu giảng viên
 
-Ngày chạy: 15/11/2026. Môi trường: Linux, Temurin JDK 21.0.13, Maven 3.9.9, compile release 17.
-Lệnh kiểm tra: `mvn test -Dtest=*ControllerTest` (môi trường soạn bài dùng offline sau khi tải đủ dependency).
+Ngày chạy 20/11/2026, hoàn tất 15:41:35 giờ Việt Nam. Linux, Temurin JDK 21.0.13, Maven 3.9.9, compiler release 17.
 
-| Lớp test | Số ca thực thi | Failures | Errors | Skipped |
+| Lớp | Số lượt | Failures | Errors | Skipped |
 |---|---:|---:|---:|---:|
-| AuthControllerTest | 51 | 0 | 0 | 0 |
+| AuthControllerTest | 63 | 0 | 0 | 0 |
 | AdminCategoryControllerTest | 16 | 0 | 0 | 0 |
-| Tổng | 67 | 0 | 0 | 0 |
+| Tổng | 79 | 0 | 0 | 0 |
 
-**BUILD SUCCESS**. Đây là 67 lượt test gồm các dòng parameterized; không phải 67 phương thức Java riêng.
-Báo cáo thực tế rút gọn được lưu tại minh-chung-junit/.
+**BUILD SUCCESS.** Chạy thực tế bằng `mvn clean test -Dtest=AuthControllerTest,AdminCategoryControllerTest`.
 
-Đã thử demo đổi mong đợi mật khẩu 7 ký tự từ false thành true: 6 ca biên chạy, 1 ca thất bại đúng dự kiến. Đã khôi phục và chạy lại toàn bộ 67 ca thành công. Bản giao không chứa thay đổi cố ý làm đỏ.
+Mã test dùng @BeforeEach/@AfterEach, các phương thức public, @Tag và @DisplayName có ID/tiếng Việt. Dữ liệu từng ca được đặt ở đầu phương thức, tiếp theo là gọi Controller và kiểm tra kết quả. Nhóm sáu biên mật khẩu dùng @ParameterizedTest với @CsvSource.
 
-Bộ test kiểm tra Controller và validation, DAO được mock; không xác nhận ghi SQL thật hay render JSP. Không chứng nhận các ca UI tuần 1 đã Pass. Chưa chạy trên Eclipse/Windows của sinh viên.
+Đã triển khai 12 ca đăng nhập bổ sung với nhiều email/mật khẩu cụ thể. Test Cases và Test Plan đồng bộ tổng 79 lượt, tên phương thức, fixture và kết quả.
 
-## Vấn đề gặp khi chuẩn bị và đã xử lý
-
-- Cần JDK đầy đủ để compiler dùng release 17.
-- Môi trường hạn chế tự attach agent: cấu hình Mockito javaagent trong Surefire.
-- Lỗi test InvalidUseOfMatchersException: lấy giá trị request và tính hash trước lệnh verify, không gọi mock lồng trong lúc đang khai báo matcher.
-
-Sinh viên tự chạy lại trên máy, lưu ảnh thật, bổ sung ngày chạy và các lỗi phát sinh nếu có.
+Báo cáo Surefire được giữ trong [style-2026-11-20](minh-chung-junit/style-2026-11-20). Lần chạy dùng DAO mock để kiểm tra Controller. Chạy web/SQL cần môi trường và bằng chứng riêng. Sinh viên tự chạy lại trên Eclipse/Windows và ghi kết quả máy mình.

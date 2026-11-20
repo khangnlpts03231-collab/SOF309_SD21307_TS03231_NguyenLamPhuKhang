@@ -1,0 +1,8 @@
+Linux, Temurin JDK 21.0.13, Maven 3.9.9
+Command: mvn clean test -Dtest=AuthControllerTest,AdminCategoryControllerTest
+[INFO] Tests run: 63, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.047 s -- in vn.celineclosset.controller.AuthControllerTest
+[INFO] Tests run: 16, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.083 s -- in vn.celineclosset.controller.AdminCategoryControllerTest
+[INFO] Tests run: 79, Failures: 0, Errors: 0, Skipped: 0
+[INFO] BUILD SUCCESS
+[INFO] Total time:  5.069 s
+[INFO] Finished at: 2026-11-20T08:41:35Z

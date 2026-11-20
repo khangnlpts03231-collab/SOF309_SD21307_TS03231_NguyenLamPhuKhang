@@ -21,3 +21,10 @@ Không dùng ví dụ DuplicateUserException của dự án khác: email trùng 
 ## Kết quả cuối phiên
 
 67 lượt test Pass, 0 Failure/Error/Skipped trên Linux JDK 21. Thử mong đợi sai ở biên 7 ký tự tạo 1 Failure; đã khôi phục và chạy xanh. Đã sửa lỗi matcher trong test và thêm Mockito javaagent cho môi trường hạn chế attach. Sinh viên cần chạy lại trên máy cá nhân.
+
+
+## Cập nhật 20/11/2026 theo ảnh mẫu giảng viên
+
+Yêu cầu của sinh viên là viết test đơn giản, dễ đọc, tên hàm public, @Tag và @DisplayName tiếng Việt, có dữ liệu cụ thể và assertion rõ. Sinh viên yêu cầu đăng trực tiếp code cùng Test Plan và Test Cases lên GitHub.
+
+Đã viết lại hai lớp theo ba bước chuẩn bị, thực hiện và kiểm tra. Giữ 67 ca gốc, triển khai thêm 12 ca đăng nhập. Nhóm biên giữ @ParameterizedTest/@CsvSource. Cập nhật bảng cho đủ 79 lượt và tên phương thức thực tế. Chạy thành công 79 ca, 0 failures, 0 errors, 0 skipped. Xem KET_QUA_JUNIT_TUAN2.md.
